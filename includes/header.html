@@ -1,10 +1,15 @@
-<header class="bg-white border-b">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+<header id="site-header"
+  class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur
+         shadow transition-all duration-300">
+
+  <div id="header-inner"
+       class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between transition-all duration-300">
 
     <a href="index.html">
       <img src="assets/images/logo.png"
            alt="UNLIMSES"
-           class="h-10">
+           id="header-logo"
+           class="h-10 transition-all duration-300">
     </a>
 
     <nav class="hidden md:flex gap-8 text-sm font-medium">
@@ -24,13 +29,13 @@
   </div>
 
   <div id="mobile-menu"
-       class="hidden md:hidden bg-white border-t">
+       class="hidden md:hidden bg-white/95 backdrop-blur border-t">
     <nav class="flex flex-col p-4 gap-4 text-sm">
-      <a href="index.html">Accueil</a>
-      <a href="about.html">À propos</a>
-      <a href="services.html">Services</a>
-      <a href="formations.html">Formations</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" class="mobile-link">Accueil</a>
+      <a href="about.html" class="mobile-link">À propos</a>
+      <a href="services.html" class="mobile-link">Services</a>
+      <a href="formations.html" class="mobile-link">Formations</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
     </nav>
   </div>
 </header>
