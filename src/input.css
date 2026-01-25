@@ -1,0 +1,89 @@
+/* ============================================
+   TAILWIND BASE
+   ============================================ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   GOOGLE FONTS - POPPINS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* ============================================
+   CUSTOM STYLES
+   ============================================ */
+
+/* Focus visible pour l'accessibilité */
+@layer base {
+  *:focus-visible {
+    @apply outline-2 outline-blue-500 outline-offset-2;
+  }
+  
+  /* Classe utilitaire pour les lecteurs d'écran */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+/* ============================================
+   HEADER - MENU MOBILE
+   ============================================ */
+@layer components {
+  /* Animation du menu burger */
+  #mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  #mobile-menu.open {
+    max-height: 500px;
+  }
+  
+  /* Animation de l'icône burger vers X */
+  .burger-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .burger-icon.open .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .burger-icon.open .line2 {
+    opacity: 0;
+  }
+  
+  .burger-icon.open .line3 {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  .line1, .line2, .line3 {
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+}
+
+/* ============================================
+   UTILITIES CUSTOM
+   ============================================ */
+@layer utilities {
+  /* Backdrop blur personnalisé si nécessaire */
+  .backdrop-blur-custom {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  /* Animation smooth pour les transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

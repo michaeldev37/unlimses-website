@@ -1,41 +1,125 @@
+<!-- SEO: H1 caché pour lecteurs d'écran -->
+<h1 class="sr-only">UNLIMSES - Compétences, Technologie et Impact en Afrique</h1>
+
 <header id="site-header"
-  class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur
-         shadow transition-all duration-300">
+  class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md
+         shadow-md transition-all duration-300"
+  role="banner">
 
   <div id="header-inner"
-       class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between transition-all duration-300">
+       class="max-w-7xl mx-auto px-4 sm:px-6 py-4
+              flex items-center justify-between
+              transition-all duration-300">
 
-    <a href="index.html">
-      <img src="assets/images/logo.png"
-           alt="UNLIMSES"
-           id="header-logo"
-           class="h-10 transition-all duration-300">
+    <!-- Logo + Nom de l'entreprise -->
+    <a href="index.html" 
+       class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-1"
+       aria-label="UNLIMSES - Retour à l'accueil">
+      <img
+        src="assets/images/logo.png"
+        alt=""
+        id="header-logo"
+        class="h-10 w-auto transition-all duration-300"
+        loading="eager"
+      >
+
+      <span
+        class="hidden sm:block
+               text-xl md:text-2xl
+               font-bold tracking-wide
+               text-gray-900 font-poppins">
+        UNLIMSES
+      </span>
     </a>
 
-    <nav class="hidden md:flex gap-8 text-sm font-medium">
-      <a href="index.html">Accueil</a>
-      <a href="about.html">À propos</a>
-      <a href="services.html">Services</a>
-      <a href="formations.html">Formations</a>
-      <a href="contact.html">Contact</a>
+    <!-- Navigation desktop -->
+    <nav class="hidden md:flex gap-6 lg:gap-8 text-sm font-medium"
+         aria-label="Navigation principale">
+      <a href="index.html" 
+         class="nav-link hover:text-blue-600 transition-colors py-2 rounded-md
+                focus:outline-none focus:ring-2 focus:ring-blue-500 px-2"
+         data-page="index">
+        Accueil
+      </a>
+      <a href="about.html" 
+         class="nav-link hover:text-blue-600 transition-colors py-2 rounded-md
+                focus:outline-none focus:ring-2 focus:ring-blue-500 px-2"
+         data-page="about">
+        À propos
+      </a>
+      <a href="services.html" 
+         class="nav-link hover:text-blue-600 transition-colors py-2 rounded-md
+                focus:outline-none focus:ring-2 focus:ring-blue-500 px-2"
+         data-page="services">
+        Services
+      </a>
+      <a href="formations.html" 
+         class="nav-link hover:text-blue-600 transition-colors py-2 rounded-md
+                focus:outline-none focus:ring-2 focus:ring-blue-500 px-2"
+         data-page="formations">
+        Formations
+      </a>
+      <a href="contact.html" 
+         class="nav-link hover:text-blue-600 transition-colors py-2 rounded-md
+                focus:outline-none focus:ring-2 focus:ring-blue-500 px-2"
+         data-page="contact">
+        Contact
+      </a>
     </nav>
 
+    <!-- Bouton menu mobile -->
     <button id="burger-btn"
-            class="md:hidden"
-            aria-label="Menu">
-      <i data-lucide="menu"></i>
+            class="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors
+                   focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+      <div class="burger-icon w-6 h-6 flex flex-col justify-center gap-1.5">
+        <span class="line1 block h-0.5 w-6 bg-gray-900 rounded"></span>
+        <span class="line2 block h-0.5 w-6 bg-gray-900 rounded"></span>
+        <span class="line3 block h-0.5 w-6 bg-gray-900 rounded"></span>
+      </div>
     </button>
 
   </div>
 
-  <div id="mobile-menu"
-       class="hidden md:hidden bg-white/95 backdrop-blur border-t">
-    <nav class="flex flex-col p-4 gap-4 text-sm">
-      <a href="index.html" class="mobile-link">Accueil</a>
-      <a href="about.html" class="mobile-link">À propos</a>
-      <a href="services.html" class="mobile-link">Services</a>
-      <a href="formations.html" class="mobile-link">Formations</a>
-      <a href="contact.html" class="mobile-link">Contact</a>
-    </nav>
-  </div>
+  <!-- Menu mobile -->
+  <nav id="mobile-menu"
+       class="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200"
+       aria-label="Menu mobile">
+
+    <div class="flex flex-col p-4 gap-2 text-sm font-medium">
+      <a href="index.html"
+         class="mobile-link py-3 px-4 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors
+                focus:outline-none focus:ring-2 focus:ring-blue-500"
+         data-page="index">
+        Accueil
+      </a>
+      <a href="about.html"
+         class="mobile-link py-3 px-4 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors
+                focus:outline-none focus:ring-2 focus:ring-blue-500"
+         data-page="about">
+        À propos
+      </a>
+      <a href="services.html"
+         class="mobile-link py-3 px-4 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors
+                focus:outline-none focus:ring-2 focus:ring-blue-500"
+         data-page="services">
+        Services
+      </a>
+      <a href="formations.html"
+         class="mobile-link py-3 px-4 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors
+                focus:outline-none focus:ring-2 focus:ring-blue-500"
+         data-page="formations">
+        Formations
+      </a>
+      <a href="contact.html"
+         class="mobile-link py-3 px-4 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors
+                focus:outline-none focus:ring-2 focus:ring-blue-500"
+         data-page="contact">
+        Contact
+      </a>
+    </div>
+
+  </nav>
 </header>
