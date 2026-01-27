@@ -21,5 +21,11 @@
   "homepage": "https://github.com/michaeldev37/unlimses-website#readme",
   "devDependencies": {
     "tailwindcss": "^3.4.19"
+  },
+  "dependencies": {
+    "@fontsource/open-sans": "^5.2.7",
+    "@fontsource/plus-jakarta-sans": "^5.2.8",
+    "@fontsource/poppins": "^5.2.7",
+    "@fontsource/source-sans-3": "^5.2.9"
   }
 }

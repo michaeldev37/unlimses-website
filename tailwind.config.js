@@ -8,8 +8,40 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'],
-        'sans': ['Poppins', 'system-ui', 'sans-serif']
+        'sans': [
+          'Plus Jakarta Sans',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'Noto Sans',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji'
+        ],
+        'poppins': [
+          'Poppins',
+          'Helvetica',
+          'Arial',
+          'sans-serif'
+        ],
+        'open-sans': [
+          'Open Sans',
+          'Arial',
+          'sans-serif'
+        ],
+        'serif': [
+          'Times New Roman',
+          'serif'
+        ],
+        'heading': [
+          'Poppins',
+          'sans-serif'
+        ]
       },
       backdropBlur: {
         'custom': '12px'

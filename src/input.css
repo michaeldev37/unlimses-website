@@ -1,26 +1,28 @@
-/* ============================================
-   TAILWIND BASE
-   ============================================ */
+@import '@fontsource/plus-jakarta-sans/300.css';
+@import '@fontsource/plus-jakarta-sans/400.css';
+@import '@fontsource/plus-jakarta-sans/500.css';
+@import '@fontsource/plus-jakarta-sans/600.css';
+@import '@fontsource/plus-jakarta-sans/700.css';
+
+@import '@fontsource/poppins/300.css';
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+
+@import '@fontsource/open-sans/400.css';
+@import '@fontsource/open-sans/600.css';
+@import '@fontsource/open-sans/700.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ============================================
-   GOOGLE FONTS - POPPINS
-   ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-/* ============================================
-   CUSTOM STYLES
-   ============================================ */
-
-/* Focus visible pour l'accessibilité */
 @layer base {
   *:focus-visible {
     @apply outline-2 outline-blue-500 outline-offset-2;
   }
   
-  /* Classe utilitaire pour les lecteurs d'écran */
   .sr-only {
     position: absolute;
     width: 1px;
@@ -34,11 +36,7 @@
   }
 }
 
-/* ============================================
-   HEADER - MENU MOBILE
-   ============================================ */
 @layer components {
-  /* Animation du menu burger */
   #mobile-menu {
     max-height: 0;
     overflow: hidden;
@@ -49,7 +47,6 @@
     max-height: 500px;
   }
   
-  /* Animation de l'icône burger vers X */
   .burger-icon {
     transition: transform 0.3s ease;
   }
@@ -72,17 +69,12 @@
   }
 }
 
-/* ============================================
-   UTILITIES CUSTOM
-   ============================================ */
 @layer utilities {
-  /* Backdrop blur personnalisé si nécessaire */
   .backdrop-blur-custom {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
   
-  /* Animation smooth pour les transitions */
   .transition-smooth {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
